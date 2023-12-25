@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Yomogi&display=swap");
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+.imageContainer {
+  position: relative;
+}
+.imageContainer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 4%;
+  background: rgba(0, 0, 0, 0.5); /* ここで透明度を設定 */
+  z-index: 1; /* テキストの下に来るように調整 */
+}
+
+.textOverlay {
+  font-family: "Yomogi", cursive;
+  position: absolute;
+  top: 50%; /* 画像の中央に配置 */
+  left: 50%; /* 画像の中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃えのための調整 */
+  color: white; /* テキストの色 */
+  font-size: 4rem; /* テキストのサイズ */
+  text-align: center; /* テキストを中央揃えに */
+  z-index: 2; /* オーバーレイより上に来るように調整 */
+  font-weight: bold;
+  .textSubtitle {
+    font-size: 2.5rem;
+    margin: 25px 0;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease 3s forwards;
+  }
+}
+
+.textOverlay span {
+  opacity: 0;
+  display: inline-block; /* 各文字を個別のブロックとして扱う */
+  animation: fadeIn 0.5s forwards; /* アニメーションを適用 */
+  animation-delay: calc(0.3s * var(--i)); /* 文字ごとに遅延を設定 */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.buttonContainer {
+  margin-top: 200px;
+  position: absolute;
+  bottom: 20px; /* ボタンの位置を画像の下部に調整 */
+  left: 50%; /* 中央揃え */
+  transform: translateX(-50%);
+  z-index: 10; /* テキストの上に表示 */
+}
+
+.inquiryButton {
+  background-color: #ffffffaa; /* 半透明の白色 */
+  color: #333; /* ボタンの文字色 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; /* 角を丸くする */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* ホバー効果 */
+}
+
+.inquiryButton:hover {
+  background-color: #ffffff; /* ホバー時の背景色 */
+}
