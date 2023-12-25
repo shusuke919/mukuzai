@@ -59,12 +59,12 @@
   left: 50%; /* 画像の中央に配置 */
   transform: translate(-50%, -50%); /* 中央揃えのための調整 */
   color: white; /* テキストの色 */
-  font-size: 4rem; /* テキストのサイズ */
+  font-size: 3rem; /* テキストのサイズ */
   text-align: center; /* テキストを中央揃えに */
   z-index: 2; /* オーバーレイより上に来るように調整 */
   font-weight: bold;
   .textSubtitle {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 25px 0;
     font-weight: bold;
     opacity: 0;
