@@ -108,3 +108,73 @@
 .inquiryButton:hover {
   background-color: #ffffff; /* ホバー時の背景色 */
 }
+
+.discountContainer {
+  text-align: center;
+
+  width: 100%;
+  background-color: #333;
+  color: #ffffff;
+  height: 250px;
+  margin-top: 80px;
+  .textArea {
+    margin: 30px;
+  }
+}
+.video_wrapper {
+  margin-top: 80px;
+  position: relative;
+  width: 50vw;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.video_wrapper > video {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+.menu_wrapper {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column; /* 追加：子要素を縦方向に配置 */
+  justify-content: center;
+  align-items: center; /* 追加：水平方向で中央揃え */
+}
+
+.lists {
+  margin-top: 40px;
+  list-style-type: none;
+  display: flex;
+
+  flex-wrap: wrap; /* 追加：必要に応じてアイテムを折り返す */
+  justify-content: center; /* 追加：リストアイテムを中央揃え */
+}
+
+.fullWidthImageContainer {
+  margin-top: 80px;
+  position: relative;
+  width: 100vw;
+}
+.fullWidthImageContainer p {
+  position: absolute;
+  transform: translate(-50%, -50%); /* 中央揃えと回転 */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+}
+.text_right {
+  top: 40%;
+  left: 90%;
+}
+.text_center {
+  top: 40%;
+  left: 85%;
+}
+.text_left {
+  top: 40%;
+  left: 80%;
+}
