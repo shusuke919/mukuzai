@@ -55,14 +55,11 @@ export default function Sauna() {
           <Image
             src="/sauna_top.png"
             alt="Sauna"
-            width={4800}
-            height={2700}
+            width={1600}
+            height={900}
             sizes="100vw"
             priority
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
+
           />
           <div className={styles.textOverlay}>
             {splitText}
