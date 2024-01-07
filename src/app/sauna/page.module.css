@@ -165,16 +165,94 @@
   writing-mode: vertical-rl;
   text-orientation: upright;
   color: white;
+  font-size: 1.5rem;
+  top: 15%;
 }
 .text_right {
-  top: 40%;
   left: 90%;
 }
 .text_center {
-  top: 40%;
   left: 85%;
 }
 .text_left {
-  top: 40%;
   left: 80%;
+}
+.pointContainer {
+  width: 60vw;
+  margin-top: 80px;
+}
+.top_point {
+  display: flex;
+  justify-content: end;
+}
+.center_point {
+  display: flex;
+  justify-content: start;
+  margin-top: 30px;
+}
+.last_point {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+.featuresContainer {
+  padding-top: 50px;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に配置 */
+  background-color: #e4e4e4;
+}
+
+.featuresRow {
+  display: flex; /* Flexboxを有効化 */
+  justify-content: center; /* 子要素を中央に配置 */
+  gap: 50px; /* カード間のスペース */
+  margin-bottom: 40px; /* 行間のスペース */
+}
+.contactContainer {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+
+  display: flex;
+  /* justify-content: end; */
+
+  /* 他の必要なスタイル */
+}
+
+.contactText {
+}
+
+.hoge {
+  flex-grow: 3; /* 画面幅の3割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+}
+
+.imgText {
+  position: absolute;
+  left: 80%; /* 中央揃え */
+  top: 10%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+}
+.contactText {
+  display: flex; /* Flexboxを有効化 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 水平方向で中央揃え */
+  justify-content: center; /* 垂直方向で中央揃え */
+  background-color: #333;
+  flex-grow: 2; /* 画面幅の2割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+  color: #ffffff;
+}
+
+.textArea {
+  margin-bottom: 40px;
 }
