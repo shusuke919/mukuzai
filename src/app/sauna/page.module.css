@@ -257,19 +257,18 @@
   margin-bottom: 40px;
 }
 
-.rankingWrapper{
- display: flex;
-margin-top: 80px;
- z-index: 3;
-
-}
-.rankingImg{
-  display:inline-block;
-}
-.rankingText{
+.rankingWrapper {
   display: flex;
- justify-content: center;
-align-items:center ;
+  margin-top: 80px;
+  z-index: 3;
+}
+.rankingImg {
+  display: inline-block;
+}
+.rankingText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .caseStudyWrapper {
