@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { Hachi_Maru_Pop } from "next/font/google";
 import Link from "next/link";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -22,20 +21,70 @@ import LooksTwoIcon from "@mui/icons-material/LooksTwo";
 import Looks3Icon from "@mui/icons-material/Looks3";
 import Looks4Icon from "@mui/icons-material/Looks4";
 
-const RampartOneFont = Hachi_Maru_Pop({
-  weight: "400",
-  subsets: ["latin"],
-});
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { lime, purple } from "@mui/material/colors";
-import { useEffect } from "react";
-import Head from "next/head";
-const theme = createTheme({
-  palette: {
-    primary: lime,
-    secondary: purple,
+import IconButton, { IconButtonProps } from "@mui/material/IconButton";
+
+import { useTheme } from "@mui/material/styles";
+import MobileStepper from "@mui/material/MobileStepper";
+import Paper from "@mui/material/Paper";
+import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import {
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+} from "swiper/modules";
+
+const images = [
+  {
+    label: "Bird",
+    imgPath: "/IMG_6985.png",
   },
-});
+  {
+    label: "Bali, Indonesia",
+    imgPath: "/IMG_6995.png",
+  },
+  {
+    label: "Goč, Serbia",
+    imgPath: "/IMG_6993.png",
+  },
+  {
+    label: "Bird",
+    imgPath: "/IMG_6985.png",
+  },
+];
+
+const imagesSecond = [
+  {
+    label: "Bird",
+    imgPath: "/IMG_4465.png",
+  },
+  {
+    label: "Bali, Indonesia",
+    imgPath: "/IMG_6280 1.png",
+  },
+  {
+    label: "Goč, Serbia",
+    imgPath: "/IMG_5985.png",
+  },
+  {
+    label: "San Francisco – Oakland Bay Bridge, United States",
+    imgPath: "/IMG_3585.png",
+  },
+];
+
+import { ThemeProvider } from "@mui/material/styles";
+
+import { useEffect, useRef } from "react";
+
+import React from "react";
 
 export default function Sauna() {
   useEffect(() => {
@@ -48,6 +97,13 @@ export default function Sauna() {
     </span>
   ));
 
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+
+  const handleStepChange = (step: number) => {
+    setActiveStep(step);
+  };
+  console.log(activeStep);
   return (
     <main className={styles.main}>
       <ThemeProvider theme={theme}>
@@ -59,7 +115,6 @@ export default function Sauna() {
             height={900}
             sizes="100vw"
             priority
-
           />
           <div className={styles.textOverlay}>
             {splitText}
@@ -534,6 +589,156 @@ export default function Sauna() {
               </div>
             </Card>
           </div>
+        </div>
+        <div className={styles.rankingWrapper}>
+          <div className={styles.rankingImg}>
+            <CardMedia
+              component="img"
+              sx={{
+                width: "100%", // コンテナの幅に合わせて調整
+                height: 200, // 望む高さを設定
+                objectFit: "contain", // 画像がコンテナ内に収まるように調整
+              }}
+              image="/saunaNO1.png"
+              alt="green iguana"
+            />
+
+            <Typography component="div" variant="caption">
+              調査期間：2023年11月12日〜2023年11月18日/弊社調べ
+            </Typography>
+          </div>
+
+          <div className={styles.rankingText}>
+            <Typography component="p" variant="h4">
+              たくさんの方々からご好評いただいてます
+            </Typography>
+          </div>
+        </div>
+
+        <div className={styles.caseStudyWrapper}>
+          <Card sx={{ maxWidth: 600 }} data-aos="fade-up">
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                ホテルベルヴェデーレ様
+              </Typography>
+
+              <Typography variant="body2" color="text.secondary">
+                ホテル集客の為に導入しました。
+                <br />
+                下記しか利用できなかったプールサイドに設置することで利用者が水風呂で利用することができ、
+                売上が倍増しました。
+                <br />
+                予想以上の結果で大満足しています！
+              </Typography>
+
+              <Typography variant="body2" color="text.secondary" sx={{ mt: 3 }}>
+                <Link
+                  href="https://www.ikoi-w.com/sitemap/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ご予約はこちらから：公式HP
+                </Link>
+              </Typography>
+            </CardContent>
+            <Paper
+              square
+              elevation={0}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                height: 10,
+                pl: 2,
+                bgcolor: "background.default",
+              }}
+            >
+              {/* <Typography>{images[activeStep].label}</Typography> */}
+            </Paper>
+
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{ delay: 2500 }}
+              loop={true}
+              onSlideChange={(swiper) => handleStepChange(swiper.activeIndex)}
+            >
+              {images.map((step, index) => (
+                <SwiperSlide key={step.label}>
+                  {Math.abs(activeStep - index) <= 3 && (
+                    <Box
+                      component="img"
+                      sx={{
+                        height: 400,
+                        display: "block",
+                        maxWidth: 600,
+                        overflow: "hidden",
+                        width: "100%",
+                      }}
+                      src={step.imgPath}
+                      alt={step.label}
+                    />
+                  )}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Card>
+
+          <Card sx={{ maxWidth: 600, mt: 4 }} data-aos="fade-up">
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                滋賀県朽木別荘/I様
+              </Typography>
+
+              <Typography variant="body2" color="text.secondary">
+                サウナが大好きで友人から進めてもらい購入しました。
+                <br />
+                接客対応が迅速で丁寧でした。また、オプションも多く中でもお気に入りは夜のライトアップです。
+                <br />
+                明朗会計で安心なので周りの友人にも薦めています。
+              </Typography>
+            </CardContent>
+            <Paper
+              square
+              elevation={0}
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                height: 10,
+                pl: 2,
+                bgcolor: "background.default",
+              }}
+            >
+              {/* <Typography>{imagesSecond[activeStep].label}</Typography> */}
+            </Paper>
+            <Swiper
+              modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+              spaceBetween={50}
+              slidesPerView={1}
+              autoplay={{ delay: 2500 }}
+              loop={true}
+              onSlideChange={(swiper) => handleStepChange(swiper.activeIndex)}
+            >
+              {imagesSecond.map((step, index) => (
+                <SwiperSlide key={step.label}>
+                  {Math.abs(activeStep - index) <= 3 ? (
+                    <Box
+                      component="img"
+                      sx={{
+                        height: 400,
+                        display: "block",
+                        maxWidth: 600,
+                        overflow: "hidden",
+                        width: "100%",
+                      }}
+                      src={step.imgPath}
+                      alt={step.label}
+                    />
+                  ) : null}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </Card>
         </div>
       </ThemeProvider>
     </main>
