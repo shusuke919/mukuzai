@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 2rem;
   min-height: 100vh;
 }
 
@@ -113,7 +113,7 @@
   text-align: center;
 
   width: 100%;
-  background-color: #333;
+  background-color: #000713;
   color: #ffffff;
   height: 250px;
   margin-top: 80px;
@@ -167,6 +167,8 @@
   color: white;
   font-size: 1.5rem;
   top: 15%;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
 }
 .text_right {
   left: 90%;
@@ -184,6 +186,7 @@
 .top_point {
   display: flex;
   justify-content: end;
+  font-family: "Yomogi", cursive;
 }
 .center_point {
   display: flex;
@@ -247,7 +250,7 @@
   flex-direction: column; /* 子要素を縦方向に並べる */
   align-items: center; /* 水平方向で中央揃え */
   justify-content: center; /* 垂直方向で中央揃え */
-  background-color: #333;
+  background-color: #000f29;
   flex-grow: 2; /* 画面幅の2割を占める */
   flex-basis: 0; /* 基本サイズを0に設定 */
   color: #ffffff;
@@ -272,5 +275,32 @@
 }
 
 .caseStudyWrapper {
+  margin-top: 80px;
+}
+
+.saunaComparison {
+  margin-top: 80px;
+}
+.saunaRecommend {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end; /* 左端に寄せる */
+  align-items: center; /* 中央揃え */
+}
+
+.experience {
+  margin-top: 80px;
+  display: flex;
+}
+.experience {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questions {
+  width: 70vw;
   margin-top: 80px;
 }
