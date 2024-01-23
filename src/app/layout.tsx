@@ -1,10 +1,8 @@
-
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { useEffect } from "react";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import "aos/dist/aos.css";
+import Header from "@/compornet/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,14 +15,14 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}
-) {
-
+}) {
   return (
     <html>
       <body className={inter.className}>
-        {/* <div>header</div> */}
-        {children}</body>
+        <Header />
+
+        {children}
+      </body>
     </html>
   );
 }
