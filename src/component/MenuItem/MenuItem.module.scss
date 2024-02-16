@@ -1,0 +1,42 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.menu_wrapper {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include sp {
+    margin-top: 40px;
+  }
+}
+
+.lists {
+  margin-top: 40px;
+  list-style-type: none;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: center;
+  @include sp {
+    display: block;
+  }
+}
