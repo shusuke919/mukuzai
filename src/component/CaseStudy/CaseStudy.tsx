@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import Paper from "@mui/material/Paper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import styles from "./caseStudy.module.scss";
+import styles from "./CaseStudy.module.scss";
 import {
   Navigation,
   Pagination,
@@ -56,7 +56,7 @@ const imagesSecond = [
   },
 ];
 
-const caseStudy = () => {
+const CaseStudy = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [activeStep, setActiveStep] = React.useState(0);
 
@@ -262,4 +262,4 @@ const caseStudy = () => {
   );
 };
 
-export default caseStudy;
+export default CaseStudy;
