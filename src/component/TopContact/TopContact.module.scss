@@ -1,0 +1,37 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.discountContainer {
+  text-align: center;
+  width: 100%;
+  background-color: #000713;
+  color: #ffffff;
+  height: 250px;
+  margin-top: 80px;
+
+  .textArea {
+    margin: 30px;
+  }
+  @include sp() {
+    height: auto;
+    padding-bottom: 40px;
+    margin-top: 20px;
+  }
+}

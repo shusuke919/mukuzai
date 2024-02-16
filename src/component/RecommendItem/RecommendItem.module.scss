@@ -1,0 +1,32 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.saunaRecommend {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end; /* 左端に寄せる */
+  align-items: center; /* 中央揃え */
+  @include sp {
+    margin-top: 0px;
+    display: block;
+  }
+}

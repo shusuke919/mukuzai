@@ -1,5 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Yomogi&display=swap");
 
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+.aaaa {
+  background-color: aqua;
+  height: 100vh;
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -36,49 +59,6 @@
   border-radius: var(--border-radius);
 }
 
-.imageContainer {
-  position: relative;
-}
-.imageContainer::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: 4%;
-  background: rgba(0, 0, 0, 0.5); /* ここで透明度を設定 */
-  z-index: 1; /* テキストの下に来るように調整 */
-}
-
-.textOverlay {
-  font-family: "Yomogi", cursive;
-  position: absolute;
-  top: 50%; /* 画像の中央に配置 */
-  left: 50%; /* 画像の中央に配置 */
-  transform: translate(-50%, -50%); /* 中央揃えのための調整 */
-  color: white; /* テキストの色 */
-  font-size: 3rem; /* テキストのサイズ */
-  text-align: center; /* テキストを中央揃えに */
-  z-index: 2; /* オーバーレイより上に来るように調整 */
-  font-weight: bold;
-  .textSubtitle {
-    font-size: 2rem;
-    margin: 25px 0;
-    font-weight: bold;
-    opacity: 0;
-    animation: fadeIn 1s ease 3s forwards;
-  }
-}
-
-.textOverlay span {
-  opacity: 0;
-  display: inline-block; /* 各文字を個別のブロックとして扱う */
-  animation: fadeIn 0.5s forwards; /* アニメーションを適用 */
-  animation-delay: calc(0.3s * var(--i)); /* 文字ごとに遅延を設定 */
-}
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -109,42 +89,6 @@
   background-color: #ffffff; /* ホバー時の背景色 */
 }
 
-.discountContainer {
-  text-align: center;
-
-  width: 100%;
-  background-color: #000713;
-  color: #ffffff;
-  height: 250px;
-  margin-top: 80px;
-  .textArea {
-    margin: 30px;
-  }
-}
-.video_wrapper {
-  margin-top: 80px;
-  position: relative;
-  width: 50vw;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.video_wrapper > video {
-  position: absolute;
-  top: 35%;
-  left: 30%;
-  transform: translateX(-50%) translateY(-50%);
-  min-width: 100%;
-  min-height: 100%;
-}
-.menu_wrapper {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column; /* 追加：子要素を縦方向に配置 */
-  justify-content: center;
-  align-items: center; /* 追加：水平方向で中央揃え */
-}
-
 .lists {
   margin-top: 40px;
   list-style-type: none;
@@ -152,51 +96,6 @@
 
   flex-wrap: wrap; /* 追加：必要に応じてアイテムを折り返す */
   justify-content: center; /* 追加：リストアイテムを中央揃え */
-}
-
-.fullWidthImageContainer {
-  margin-top: 80px;
-  position: relative;
-  width: 100vw;
-}
-.fullWidthImageContainer p {
-  position: absolute;
-  transform: translate(-50%, -50%); /* 中央揃えと回転 */
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  color: white;
-  font-size: 1.5rem;
-  top: 15%;
-  font-family: "Yomogi", cursive;
-  font-weight: bold;
-}
-.text_right {
-  left: 90%;
-}
-.text_center {
-  left: 85%;
-}
-.text_left {
-  left: 80%;
-}
-.pointContainer {
-  width: 60vw;
-  margin-top: 80px;
-}
-.top_point {
-  display: flex;
-  justify-content: end;
-  font-family: "Yomogi", cursive;
-}
-.center_point {
-  display: flex;
-  justify-content: start;
-  margin-top: 30px;
-}
-.last_point {
-  display: flex;
-  justify-content: end;
-  margin-top: 30px;
 }
 
 .featuresContainer {
@@ -224,9 +123,6 @@
   /* justify-content: end; */
 
   /* 他の必要なスタイル */
-}
-
-.contactText {
 }
 
 .hoge {
