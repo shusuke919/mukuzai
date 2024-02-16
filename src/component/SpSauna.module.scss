@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Yomogi&display=swap");
+
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+.aaaa {
+  background-color: aqua;
+  height: 100vh;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.description {
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.description a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.description p {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
+  border-radius: var(--border-radius);
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.buttonContainer {
+  margin-top: 200px;
+  position: absolute;
+  bottom: 20px; /* ボタンの位置を画像の下部に調整 */
+  left: 50%; /* 中央揃え */
+  transform: translateX(-50%);
+  z-index: 10; /* テキストの上に表示 */
+}
+
+.inquiryButton {
+  background-color: #ffffffaa; /* 半透明の白色 */
+  color: #333; /* ボタンの文字色 */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px; /* 角を丸くする */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* ホバー効果 */
+}
+
+.inquiryButton:hover {
+  background-color: #ffffff; /* ホバー時の背景色 */
+}
+
+.lists {
+  margin-top: 40px;
+  list-style-type: none;
+  display: flex;
+
+  flex-wrap: wrap; /* 追加：必要に応じてアイテムを折り返す */
+  justify-content: center; /* 追加：リストアイテムを中央揃え */
+}
+
+.featuresContainer {
+  padding-top: 50px;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に配置 */
+  background-color: #e4e4e4;
+}
+
+.featuresRow {
+  display: flex; /* Flexboxを有効化 */
+  justify-content: center; /* 子要素を中央に配置 */
+  gap: 50px; /* カード間のスペース */
+  margin-bottom: 40px; /* 行間のスペース */
+}
+.contactContainer {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+
+  display: flex;
+  /* justify-content: end; */
+
+  /* 他の必要なスタイル */
+}
+
+.hoge {
+  flex-grow: 3; /* 画面幅の3割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+}
+
+.imgText {
+  position: absolute;
+  left: 80%; /* 中央揃え */
+  top: 10%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+}
+.contactText {
+  display: flex; /* Flexboxを有効化 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 水平方向で中央揃え */
+  justify-content: center; /* 垂直方向で中央揃え */
+  background-color: #000f29;
+  flex-grow: 2; /* 画面幅の2割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+  color: #ffffff;
+}
+
+.textArea {
+  margin-bottom: 40px;
+}
+
+.rankingWrapper {
+  display: flex;
+  margin-top: 80px;
+  z-index: 3;
+}
+.rankingImg {
+  display: inline-block;
+}
+.rankingText {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.caseStudyWrapper {
+  margin-top: 80px;
+}
+
+.saunaComparison {
+  margin-top: 80px;
+}
+.saunaRecommend {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  justify-content: flex-end; /* 左端に寄せる */
+  align-items: center; /* 中央揃え */
+}
+
+.experience {
+  margin-top: 80px;
+  display: flex;
+}
+.experience {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.questions {
+  width: 70vw;
+  margin-top: 80px;
+}
