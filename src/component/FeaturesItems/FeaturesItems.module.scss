@@ -1,0 +1,45 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.featuresContainer {
+  padding-top: 50px;
+  margin-top: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 子要素を中央に配置 */
+  background-color: #e4e4e4;
+}
+
+.featuresRow {
+  display: flex; /* Flexboxを有効化 */
+  justify-content: center; /* 子要素を中央に配置 */
+  gap: 50px; /* カード間のスペース */
+  margin-bottom: 40px; /* 行間のスペース */
+  @include sp {
+    display: block;
+    .one_feature {
+      margin-bottom: 40px;
+    }
+    .three_feature {
+      margin-bottom: 40px;
+    }
+  }
+}

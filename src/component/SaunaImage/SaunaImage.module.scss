@@ -1,0 +1,61 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.fullWidthImageContainer {
+  margin-top: 80px;
+  position: relative;
+  width: 100vw;
+  @include sp {
+    margin-top: 40px;
+  }
+}
+.fullWidthImageContainer p {
+  position: absolute;
+  transform: translate(-50%, -50%); /* 中央揃えと回転 */
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: white;
+  font-size: 1.5rem;
+  top: 15%;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  @include sp {
+    top: 10%;
+  }
+}
+
+.text_right {
+  left: 90%;
+  @include sp {
+    left: 85%;
+  }
+}
+.text_center {
+  left: 85%;
+  @include sp {
+    left: 70%;
+  }
+}
+.text_left {
+  left: 80%;
+  @include sp {
+    left: 55%;
+  }
+}

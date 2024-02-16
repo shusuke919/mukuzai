@@ -1,0 +1,88 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.contactContainer {
+  position: relative;
+  margin-top: 80px;
+  width: 100vw;
+
+  display: flex;
+  @include sp {
+    display: block;
+  }
+}
+
+.hoge {
+  flex-grow: 3; /* 画面幅の3割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+}
+
+.imgText {
+  position: absolute;
+  left: 80%; /* 中央揃え */
+  top: 10%;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: "Yomogi", cursive;
+  font-weight: bold;
+  @include sp {
+    left: 70%; /* 中央揃え */
+    top: 55%;
+    font-size: 1.5rem;
+  }
+}
+.contactText {
+  display: flex; /* Flexboxを有効化 */
+  flex-direction: column; /* 子要素を縦方向に並べる */
+  align-items: center; /* 水平方向で中央揃え */
+  justify-content: center; /* 垂直方向で中央揃え */
+  background-color: #000f29;
+  flex-grow: 2; /* 画面幅の2割を占める */
+  flex-basis: 0; /* 基本サイズを0に設定 */
+  color: #ffffff;
+  @include sp {
+    padding-bottom: 50px;
+  }
+}
+
+.textArea {
+  margin-bottom: 40px;
+}
+.freePresent {
+  font-size: 18px;
+  @include sp {
+    font-size: 15px;
+  }
+}
+.TellContact {
+  font-size: 17px;
+  @include sp {
+    font-size: 15px;
+  }
+}
+
+.OnlineContact {
+  font-size: 17px;
+  @include sp {
+    font-size: 15px;
+  }
+}

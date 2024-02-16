@@ -1,0 +1,74 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.imageContainer {
+  position: relative;
+}
+.imageContainer::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 4%;
+  background: rgba(0, 0, 0, 0.5); /* ここで透明度を設定 */
+  z-index: 1; /* テキストの下に来るように調整 */
+}
+
+.textOverlay {
+  font-family: "Yomogi", cursive;
+  position: absolute;
+  top: 50%; /* 画像の中央に配置 */
+  left: 50%; /* 画像の中央に配置 */
+  transform: translate(-50%, -50%); /* 中央揃えのための調整 */
+  color: white; /* テキストの色 */
+  font-size: 3rem; /* テキストのサイズ */
+  text-align: center; /* テキストを中央揃えに */
+  z-index: 2; /* オーバーレイより上に来るように調整 */
+  font-weight: bold;
+  @include sp {
+    font-size: 1.6rem;
+  }
+  .textSubtitle {
+    font-size: 2rem;
+    margin: 25px 0;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease 3s forwards;
+    @include sp {
+      font-size: 1rem;
+    }
+  }
+}
+
+.textOverlay span {
+  opacity: 0;
+  display: inline-block; /* 各文字を個別のブロックとして扱う */
+  animation: fadeIn 0.5s forwards; /* アニメーションを適用 */
+  animation-delay: calc(0.3s * var(--i)); /* 文字ごとに遅延を設定 */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

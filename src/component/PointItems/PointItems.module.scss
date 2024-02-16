@@ -1,0 +1,43 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.pc {
+  display: block;
+  @include sp {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+  @include sp() {
+    display: block;
+  }
+}
+
+.pointContainer {
+  width: 60vw;
+  margin-top: 80px;
+  @include sp() {
+    width: 95vw;
+    margin-top: 40px;
+  }
+}
+.top_point {
+  display: flex;
+  justify-content: end;
+  font-family: "Yomogi", cursive;
+}
+.center_point {
+  display: flex;
+  justify-content: start;
+  margin-top: 30px;
+}
+.last_point {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
