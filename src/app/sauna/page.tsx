@@ -46,7 +46,7 @@ interface Props {
   splitText: React.JSX.Element[];
 }
 
-export function Sauna() {
+export default function Sauna() {
   const text = "それは、究極のサウナ";
   const splitText = text.split("").map((char, index) => (
     <span key={index} style={{ "--i": index } as React.CSSProperties}>
@@ -57,7 +57,7 @@ export function Sauna() {
   return (
     <>
       <main className={styles.sp}>
-        <SpSauna theme={theme} splitText={splitText} />
+        {/* <SpSauna theme={theme} splitText={splitText} /> */}
       </main>
       <main className={styles.pc}>
         <PcSauna theme={theme} splitText={splitText} />
