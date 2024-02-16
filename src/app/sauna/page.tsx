@@ -46,7 +46,7 @@ interface Props {
   splitText: React.JSX.Element[];
 }
 
-export default function Sauna() {
+export function Sauna() {
   const text = "それは、究極のサウナ";
   const splitText = text.split("").map((char, index) => (
     <span key={index} style={{ "--i": index } as React.CSSProperties}>
@@ -97,12 +97,6 @@ export function PcSauna({ theme, splitText }: Props) {
   useEffect(() => {
     AOS.init();
   }, []);
-
-  const [activeStep, setActiveStep] = React.useState(0);
-
-  const handleStepChange = (step: number) => {
-    setActiveStep(step);
-  };
 
   const [expanded, setExpanded] = React.useState<string | false>(false);
 
