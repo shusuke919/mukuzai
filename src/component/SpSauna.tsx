@@ -17,6 +17,7 @@ import SaunaComparison from "./SaunaComparison/SaunaComparison";
 import RecommendItem from "./RecommendItem/RecommendItem";
 import Flow from "./Flow/Flow";
 import Experience from "./Experience/Experience";
+import Question from "./Question/Question";
 
 const SpSauna = ({ splitText }: Props) => {
   return (
@@ -33,11 +34,11 @@ const SpSauna = ({ splitText }: Props) => {
       <RankingItem />
       <CaseStudy />
       <SaunaComparison />
-
       <RecommendItem />
       <Flow />
       <ContactItem />
       <Experience />
+      <Question />
     </main>
   );
 };

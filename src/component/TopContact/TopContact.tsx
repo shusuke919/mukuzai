@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import React from "react";
 import Button from "@mui/material/Button";
 import styles from "./TopContact.module.scss";
+import Link from "next/link";
 
 const TopContact = () => {
   return (
@@ -36,7 +37,7 @@ const TopContact = () => {
           >
             お電話でもお問い合わせいただけます
             <br />
-            06-7777-5932
+            <a href="tel:+81-90-9998-2777">090-9998-2777</a>
           </Typography>
         </Button>
         <Button
@@ -55,9 +56,11 @@ const TopContact = () => {
             component="div"
             sx={{ color: "black" }}
           >
-            どんなサウナができるか
-            <br />
-            無料で問い合わせる
+            <Link target="_blank" href="https://forms.gle/jbdKHXJHPKWVaffH9">
+              どんなサウナができるか
+              <br />
+              無料で問い合わせる
+            </Link>
           </Typography>
         </Button>
       </div>

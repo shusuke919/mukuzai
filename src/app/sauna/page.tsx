@@ -1,20 +1,12 @@
 "use client";
-
 import styles from "./page.module.scss";
-
 import "aos/dist/aos.css";
-
 import "swiper/css";
-
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import { ThemeProvider } from "@mui/material/styles";
-
 import React from "react";
-
 import theme from "@/theme";
-
 import PcSauna from "@/component/PcSauna";
 import SpSauna from "@/component/SpSauna";
 
