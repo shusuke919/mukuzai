@@ -151,7 +151,7 @@ const CaseStudy = () => {
                   <Box
                     component="img"
                     sx={{
-                      height: { sm: 400, xs: 200 },
+                      height: { sm: 400, xs: 150 },
                       display: "block",
                       maxWidth: 600,
                       overflow: "hidden",
@@ -242,7 +242,7 @@ const CaseStudy = () => {
                   <Box
                     component="img"
                     sx={{
-                      height: { sm: 400, xs: 200 },
+                      height: { sm: 400, xs: 150 },
                       display: "block",
                       maxWidth: 600,
                       overflow: "hidden",
