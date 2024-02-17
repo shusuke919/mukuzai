@@ -83,12 +83,15 @@ const PointItems = () => {
           <Box
             sx={{
               display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
             }}
           >
             <CardContent
               sx={{
                 flex: "1 0 auto",
                 display: "flex",
+                justifyContent: "center",
                 alignItems: "center",
               }}
             >
