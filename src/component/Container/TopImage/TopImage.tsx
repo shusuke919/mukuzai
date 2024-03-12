@@ -10,11 +10,9 @@ interface Props {
   splitText: React.JSX.Element[];
 }
 
-const TopImage = ({ splitText }: Props) => {
+const TopImage = () => {
   return (
     <div className={styles.imageContainer}>
-
-
       <Swiper className="sample-slider">
         <SwiperSlide>
           {" "}
