@@ -21,10 +21,55 @@
 .imageContainer {
   position: relative;
 }
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.04); /* 10%拡大 */
+  }
+}
 
+// .zoomEffect {
+//   animation: zoomIn 9s ease-in-out infinite;
 
+// }
 
+.slide {
+  position: relative;
+  width: 100%;
+  height: auto;
 
+  img {
+    width: 100%;
+    height: auto;
+  }
 
+  .slideText {
+    position: absolute;
+    bottom: 30%; // 下からの距離
+    left: 100px; // 左からの距離
+    color: #fff; // テキストの色
+    font-size: 24px;
+    letter-spacing: 7px;
+    padding: 10px; // パディング
+    border-radius: 5px; // 角丸の設定（任意）
+    p {
+      padding: 4px;
+    }
+    .smallText {
+      display: flex;
+      font-size: 10px;
+      letter-spacing: 0px;
+      margin-top: 30px;
+    }
+  }
+}
 
-
+.whiteLine {
+  height: 1px; // 線の太さ
+  width: 90px; // 線の長さ
+  background-color: #fff; // 線の色
+  margin-top: 9px;
+  margin-right: 20px;
+}
