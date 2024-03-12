@@ -1,21 +1,21 @@
 import { Props } from "@/app/sauna/page";
 import React, { useEffect } from "react";
-import TopImage from "./TopImage/TopImage";
-import TopContact from "./TopContact/TopContact";
-import VideoItem from "./VideoItem/VideoItem";
+import TopImage from "./Sauna/TopImage/TopImage";
+import TopContact from "./Sauna/TopContact/TopContact";
+import VideoItem from "./Sauna/VideoItem/VideoItem";
 import { MenuItem } from "@mui/material";
-import SaunaImage from "./SaunaImage/SaunaImage";
-import PointItems from "./PointItems/PointItems";
-import FeaturesItems from "@/component/FeaturesItems/FeaturesItems";
-import ChartItem from "@/component/ChartItem/ChartItem";
-import ContactItem from "@/component/ContactItem/ContactItem";
-import RankingItem from "@/component/RankingItem/RankingItem";
-import CaseStudy from "@/component/CaseStudy/CaseStudy";
+import SaunaImage from "./Sauna/SaunaImage/SaunaImage";
+import PointItems from "./Sauna/PointItems/PointItems";
+import FeaturesItems from "@/component/Sauna/FeaturesItems/FeaturesItems";
+import ChartItem from "@/component/Sauna/ChartItem/ChartItem";
+import ContactItem from "@/component/Sauna/ContactItem/ContactItem";
+import RankingItem from "@/component/Sauna/RankingItem/RankingItem";
+import CaseStudy from "@/component/Sauna/CaseStudy/CaseStudy";
 import theme from "@/theme";
-import SaunaComparison from "@/component/SaunaComparison/SaunaComparison";
-import RecommendItem from "@/component/RecommendItem/RecommendItem";
-import Flow from "@/component/Flow/Flow";
-import Experience from "@/component/Experience/Experience";
+import SaunaComparison from "@/component/Sauna/SaunaComparison/SaunaComparison";
+import RecommendItem from "@/component/Sauna/RecommendItem/RecommendItem";
+import Flow from "@/component/Sauna/Flow/Flow";
+import Experience from "@/component/Sauna/Experience/Experience";
 import CardMedia from "@mui/material/CardMedia";
 
 import Typography from "@mui/material/Typography";
@@ -27,7 +27,7 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import styles from "./PcSauna.module.scss";
 import AOS from "aos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Question from "./Question/Question";
+import Question from "./Sauna/Question/Question";
 
 const PcSauna = ({ splitText }: Props) => {
   useEffect(() => {

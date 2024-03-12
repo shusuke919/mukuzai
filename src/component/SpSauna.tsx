@@ -2,22 +2,22 @@ import { Props } from "@/app/sauna/page";
 import styles from "./PcSauna.module.scss";
 
 import React from "react";
-import TopImage from "./TopImage/TopImage";
-import TopContact from "./TopContact/TopContact";
-import VideoItem from "./VideoItem/VideoItem";
+import TopImage from "./Sauna/TopImage/TopImage";
+import TopContact from "./Sauna/TopContact/TopContact";
+import VideoItem from "./Sauna/VideoItem/VideoItem";
 import { MenuItem } from "@mui/material";
-import SaunaImage from "./SaunaImage/SaunaImage";
-import PointItems from "./PointItems/PointItems";
-import FeaturesItems from "@/component/FeaturesItems/FeaturesItems";
-import ChartItem from "./ChartItem/ChartItem";
-import ContactItem from "./ContactItem/ContactItem";
-import RankingItem from "./RankingItem/RankingItem";
-import CaseStudy from "./CaseStudy/CaseStudy";
-import SaunaComparison from "./SaunaComparison/SaunaComparison";
-import RecommendItem from "./RecommendItem/RecommendItem";
-import Flow from "./Flow/Flow";
-import Experience from "./Experience/Experience";
-import Question from "./Question/Question";
+import SaunaImage from "./Sauna/SaunaImage/SaunaImage";
+import PointItems from "./Sauna/PointItems/PointItems";
+import FeaturesItems from "@/component/Sauna/FeaturesItems/FeaturesItems";
+import ChartItem from "./Sauna/ChartItem/ChartItem";
+import ContactItem from "./Sauna/ContactItem/ContactItem";
+import RankingItem from "./Sauna/RankingItem/RankingItem";
+import CaseStudy from "./Sauna/CaseStudy/CaseStudy";
+import SaunaComparison from "./Sauna/SaunaComparison/SaunaComparison";
+import RecommendItem from "./Sauna/RecommendItem/RecommendItem";
+import Flow from "./Sauna/Flow/Flow";
+import Experience from "./Sauna/Experience/Experience";
+import Question from "./Sauna/Question/Question";
 
 const SpSauna = ({ splitText }: Props) => {
   return (
