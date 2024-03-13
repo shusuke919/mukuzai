@@ -38,6 +38,14 @@ const TopImage = () => {
               alt={`Slide ${index + 1}`}
               className={styles.zoomEffect}
             />
+            <div className={styles.socialMediaContainer}>
+              <p className={styles.followUsText}>FOLLOW US</p>
+
+              <div className={styles.socialIcons}>
+                {" "}
+                <div className={styles.socialMediaWhiteLine}></div>
+              </div>
+            </div>
             <div className={styles.slideText}>
               <p>大切な人との時間、</p>
               <p>大切な自分との時間。</p>

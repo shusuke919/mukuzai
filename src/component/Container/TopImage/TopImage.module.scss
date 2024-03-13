@@ -22,32 +22,34 @@
   position: relative;
 }
 @keyframes zoomIn {
-  from {
-    transform: scale(1);
+  0% {
+    transform: scale(1); /* 開始時は元のサイズ */
   }
-  to {
-    transform: scale(1.04); /* 10%拡大 */
+  50% {
+    transform: scale(1.06); /* 半分の時間で1.04倍（4%拡大）に */
+  }
+  100% {
+    transform: scale(1); /* 終了時に元のサイズに戻る */
   }
 }
 
-// .zoomEffect {
-//   animation: zoomIn 9s ease-in-out infinite;
-
-// }
+.zoomEffect {
+  animation: zoomIn 34s ease-in-out infinite;
+}
 
 .slide {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 850px;
 
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .slideText {
     position: absolute;
-    bottom: 30%; // 下からの距離
+    bottom: 20%; // 下からの距離
     left: 100px; // 左からの距離
     color: #fff; // テキストの色
     font-size: 24px;
@@ -66,10 +68,40 @@
   }
 }
 
+.socialMediaContainer {
+  position: absolute;
+  right: 40px; // Adjust as needed
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: right;
+  // Add your styles for icons and text here
+}
+
+.followUsText {
+  font-size: 10px;
+  writing-mode: vertical-lr;
+  transform: rotate(360deg);
+  color: white;
+  margin-bottom: 20px;
+
+  display: block;
+}
+
+.socialIcons {
+}
+
 .whiteLine {
-  height: 1px; // 線の太さ
-  width: 90px; // 線の長さ
-  background-color: #fff; // 線の色
+  height: 1px;
+  width: 90px;
+  background-color: #fff;
   margin-top: 9px;
   margin-right: 20px;
+}
+.socialMediaWhiteLine {
+  height: 50px;
+  width: 1px;
+  background-color: #fff;
+  display: block;
+  margin-left: 5px;
+  transform: rotate(180deg);
 }
