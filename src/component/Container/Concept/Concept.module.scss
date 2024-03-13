@@ -1,0 +1,76 @@
+.fixedContent {
+  position: relative;
+  .zoomEffect {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .textOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+    .circleContainer {
+      display: flex;
+      margin-top: 100px;
+    }
+
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 40px;
+
+      &:hover {
+        transform: scale(1.1); // ホバー時に10%サイズを大きくする
+
+        p {
+          transform: scale(1.1); // ホバー時に文字も同様に大きくする
+        }
+      }
+
+      p {
+        font-size: 2rem;
+      }
+      span {
+        font-size: 1rem;
+      }
+    }
+
+    .eat {
+      background-color: #e57373; // 任意の色
+    }
+
+    .sleep {
+      background-color: #81c784; // 任意の色
+    }
+
+    .plus {
+      background-color: #ffd54f; // 任意の色
+    }
+
+    // ここに既存の.title, .subTitle, .textContent のスタイルを追加
+    .title {
+      font-size: 3rem;
+      letter-spacing: 2px;
+    }
+    .subTitle {
+      font-size: 1rem;
+    }
+    .textContent {
+      margin-top: 60px;
+      font-size: 1.5rem;
+      line-height: 2.6;
+    }
+  }
+}

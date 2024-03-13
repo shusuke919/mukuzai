@@ -5,7 +5,8 @@ import { ThemeProvider } from "@mui/material/styles";
 import React from "react";
 import theme from "@/theme";
 import TopImage from "@/component/Container/TopImage/TopImage";
-
+import Messages from "@/component/Container/Messages/Messages";
+import Concept from "@/component/Container/Concept/Concept";
 export interface Props {
   splitText: React.JSX.Element[];
 }
@@ -17,10 +18,14 @@ export default function Container() {
         <main className={styles.sp}>
           {" "}
           <TopImage />
+          <Messages />
+          <Concept />
         </main>
         <main className={styles.pc}>
           {" "}
           <TopImage />
+          <Messages />
+          <Concept />
         </main>
       </ThemeProvider>
     </>
