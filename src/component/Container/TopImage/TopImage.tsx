@@ -38,6 +38,7 @@ const TopImage = () => {
               alt={`Slide ${index + 1}`}
               className={styles.zoomEffect}
             />
+            <div className={styles.centeredText}></div>
             <div className={styles.socialMediaContainer}>
               <p className={styles.followUsText}>FOLLOW US</p>
 
@@ -54,6 +55,7 @@ const TopImage = () => {
                 <div className={styles.whiteLine}></div>
                 <p>Enjoy Precious Time with Loved Ones.</p>
               </span>
+              <p>コンテナハウス事業</p>
             </div>
           </SwiperSlide>
         ))}
