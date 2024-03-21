@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contents {
+  height: 200px;
+  width: 1020px;
+
+  background-color: #4e7b6a;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+
+  &:hover {
+    background-color: #567c75;
+    .line {
+      width: 30px; /* 線の長さを変更 */
+      transition: width 0.3s ease;
+    }
+  }
+}
+
+.textArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+
+  color: white;
+}
+
+.textContents {
+  width: 900px;
+  display: flex;
+  justify-content: space-between;
+
+  .leftContent {
+    display: flex;
+
+    align-items: center;
+  }
+  .usText {
+    font-weight: 600;
+    font-size: 2rem;
+  }
+  .jpText {
+    margin: 5px 20px 0 20px;
+    font-size: 0.8rem;
+  }
+}
+.line {
+  height: 1px;
+  width: 250px;
+  background-color: #fff;
+  margin-top: 25px;
+  margin-right: 20px;
+  transition: width 0.3s ease;
+}

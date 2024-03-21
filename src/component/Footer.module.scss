@@ -1,0 +1,32 @@
+.footerContainer {
+  font-family: "A1 Mincho", "游明朝", "YuMincho", "ヒラギノ明朝 Pro W3",
+    "HiraMinPro-W3", "ヒラギノ明朝 ProN W3", "HiraMinProN-W3", "HG明朝E",
+    "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
+  height: 300px;
+  width: auto;
+  background-color: #000b1e;
+  color: white;
+  text-align: center;
+}
+.copyRight {
+  font-size: 0.8rem;
+
+  font-weight: 400;
+  line-height: 1;
+}
+.contents {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    cursor: pointer;
+  }
+}
+.line {
+  height: 20px;
+  width: 1px;
+  background-color: white;
+  margin: 0px 20px;
+}
