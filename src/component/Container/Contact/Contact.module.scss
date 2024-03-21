@@ -1,0 +1,88 @@
+.contactContainer {
+  margin: 100px 0;
+}
+
+.titleArea {
+  text-align: center;
+  margin-bottom: 50px;
+  .title {
+    color: #917e3a;
+    letter-spacing: 4px;
+
+    text-align: center;
+
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+  .subTitle {
+    font-size: 1rem;
+
+    margin-top: 20px;
+  }
+  .recommendation {
+    font-size: 1rem;
+
+    margin-top: 80px;
+  }
+}
+.contactArea {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.line {
+  height: 1px;
+  width: 1020px;
+  background-color: black;
+
+  margin-right: 20px;
+}
+.verticalLine {
+  height: 220px;
+  width: 1px;
+  background-color: black;
+  margin: 30px 40px;
+}
+.titleText {
+  font-weight: 700;
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+.button {
+  z-index: 1; /* ボタンを前面に表示 */
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.3rem;
+
+  background-color: #4e7b6a;
+  border: none;
+  width: 300px;
+  height: 60px;
+  margin: 0 auto 25px;
+  position: relative;
+  overflow: hidden; /* アニメーションされる背景がはみ出さないように */
+  transition: color 0.3s ease; /* テキストカラーのアニメーション */
+}
+
+.button:before {
+  /* 既存のスタイル */
+  z-index: -1; /* :before 疑似要素を背景に表示 */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(to right, transparent 50%, #f5f5f5 50%);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  color: white; /* ホバー時のテキストカラーを白に設定 */
+}
+
+.button:hover:before {
+  left: 0; /* ホバー時に背景色を動かす */
+}

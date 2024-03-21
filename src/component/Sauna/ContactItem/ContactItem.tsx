@@ -81,7 +81,7 @@ const ContactItem = () => {
               height: "100%", // 望む高さを設定
               objectFit: "contain", // 画像がコンテナ内に収まるように調整
             }}
-            image="/sauna1.png"
+            image="/saunaTop.png"
             alt="green iguana"
           />
           <div data-aos="fade-up" className={styles.imgText}>
