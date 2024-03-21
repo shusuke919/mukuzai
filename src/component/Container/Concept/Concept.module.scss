@@ -1,5 +1,14 @@
+
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
 .fixedContent {
   position: relative;
+@include sp {
+  position: static;
+}
   .zoomEffect {
     width: 100%;
     height: auto;
@@ -7,6 +16,7 @@
   }
   .textOverlay {
     position: absolute;
+    
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -15,10 +25,18 @@
     align-items: center;
     color: white;
     text-align: center;
-
+    @include sp {
+      position: static;
+      transform: translate(0%, 0%);
+      color: black;
+    }
     .circleContainer {
       display: flex;
       margin-top: 100px;
+      color: white;
+      @include sp {
+        margin-top: 50px;
+      }
     }
 
     .circle {
@@ -30,6 +48,11 @@
       justify-content: center;
       align-items: center;
       margin: 40px;
+      @include sp {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+      }
 
       &:hover {
         transform: scale(1.1); // ホバー時に10%サイズを大きくする
@@ -41,9 +64,13 @@
 
       p {
         font-size: 2rem;
+        @include sp {
+          font-size: 1.6rem;
+        }
       }
       span {
         font-size: 1rem;
+      
       }
     }
 
@@ -63,6 +90,10 @@
     .title {
       font-size: 3rem;
       letter-spacing: 2px;
+      @include sp {
+        font-size: 3rem;
+        letter-spacing: 1.5px;
+      }
     }
     .subTitle {
       font-size: 1rem;
@@ -74,6 +105,11 @@
       margin-top: 60px;
       font-size: 1.5rem;
       line-height: 2.6;
+      @include sp {
+        font-size: 16px;
+        margin-top: 30px;
+        line-height: 2.6;
+      }
     }
   }
 }

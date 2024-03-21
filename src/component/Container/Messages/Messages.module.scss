@@ -1,7 +1,19 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 .container {
   position: relative;
   display: flex;
-  overflow-y: auto; // スクロールを許可
+  overflow-y: auto;
+  @include sp {
+    display: block;
+    position: static; // スマートフォン画面でpositionをデフォルトに戻す
+    overflow-y: unset; // スマートフォン画面でoverflow-yの設定を元に戻す
+    height: 100%;
+  }
 }
 
 .fixedContent {
@@ -11,6 +23,12 @@
   position: sticky;
   top: 0;
   left: 0;
+  @include sp {
+    float: unset;
+    position: static;
+    width: auto;
+    height: 50vh;
+  }
 }
 
 .fixedText {
@@ -23,16 +41,24 @@
     "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", serif;
   width: 50%;
   height: 100vh;
-  .textArea {
-    text-align: center;
-    padding: 100px;
+  @include sp {
+    width: auto;
+    height: auto;
+  }
+}
 
-    line-height: 50px;
-    font-size: 16px;
+.textArea {
+  text-align: center;
+  padding: 100px;
+
+  line-height: 50px;
+  font-size: 16px;
+  @include sp {
+    padding: 20px;
   }
-  .textBlock {
-    padding-bottom: 30px;
-  }
+}
+.textBlock {
+  padding-bottom: 30px;
 }
 
 .zoomEffect {
@@ -46,4 +72,7 @@
   font-size: 24px;
   line-height: 60px;
   letter-spacing: 6px;
+  @include sp {
+    margin: 50px auto;
+  }
 }

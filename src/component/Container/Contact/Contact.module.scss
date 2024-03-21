@@ -1,3 +1,9 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
 .contactContainer {
   margin: 100px 0;
 }
@@ -7,12 +13,14 @@
   margin-bottom: 50px;
   .title {
     color: #917e3a;
-    letter-spacing: 4px;
 
     text-align: center;
 
     font-size: 3rem;
     letter-spacing: 2px;
+    @include sp {
+      letter-spacing: 1.5px;
+    }
   }
   .subTitle {
     font-size: 1rem;
@@ -23,6 +31,9 @@
     font-size: 1rem;
 
     margin-top: 80px;
+    @include sp {
+      margin-top: 40px;
+    }
   }
 }
 .contactArea {
@@ -30,6 +41,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include sp {
+    display: block;
+  }
 }
 .line {
   height: 1px;
@@ -37,12 +51,21 @@
   background-color: black;
 
   margin-right: 20px;
+  @include sp {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 .verticalLine {
   height: 220px;
   width: 1px;
   background-color: black;
   margin: 30px 40px;
+  @include sp {
+    height: 1px;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 .titleText {
   font-weight: 700;
