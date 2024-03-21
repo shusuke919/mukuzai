@@ -92,7 +92,7 @@
       letter-spacing: 2px;
       @include sp {
         font-size: 3rem;
-        letter-spacing: 1.5px;
+        letter-spacing: normal;
       }
     }
     .subTitle {

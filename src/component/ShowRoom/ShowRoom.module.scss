@@ -19,7 +19,8 @@
     font-size: 3rem;
     letter-spacing: 2px;
     @include sp {
-      letter-spacing: 1.5rem;
+      
+letter-spacing: normal;
     }
   }
   .titleAccess {
@@ -29,6 +30,9 @@
 
     font-size: 3rem;
     letter-spacing: 2px;
+    @include sp {
+      letter-spacing: normal;
+    }
   }
   .subTitle {
     font-size: 1rem;
