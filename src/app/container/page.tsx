@@ -20,13 +20,15 @@ export default function Container() {
     <>
       <ThemeProvider theme={theme}>
         <main className={styles.sp}>
-          {" "}
           <TopImage />
           <Messages />
           <Concept />
+          <UseStudy />
+          <ShowRoom />
+          <Reservation />
+          <Contact />
         </main>
         <main className={styles.pc}>
-          {" "}
           <TopImage />
           <Messages />
           <Concept />
