@@ -30,8 +30,32 @@ const ShowRoom = () => {
       </div>
       <Swiper
         modules={[Autoplay, EffectFade]}
-        className={styles.sample}
+        className={styles.pc}
         slidesPerView={4}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
+        loop={false}
+        speed={3000}
+        fadeEffect={{
+          crossFade: true,
+        }}
+      >
+        {containerImages.map((image, index) => (
+          <SwiperSlide key={index} className={styles.slide}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className={styles.zoomEffect}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        className={styles.sp}
+        slidesPerView={2}
         autoplay={{
           delay: 4000,
           disableOnInteraction: true,
@@ -77,7 +101,7 @@ const ShowRoom = () => {
 
       <Swiper
         modules={[Autoplay, EffectFade]}
-        className={styles.sample}
+        className={styles.pc}
         slidesPerView={4}
         autoplay={{
           delay: 4000,
@@ -99,6 +123,31 @@ const ShowRoom = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        className={styles.sp}
+        slidesPerView={2}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: true,
+        }}
+        loop={false}
+        speed={3000}
+        fadeEffect={{
+          crossFade: true,
+        }}
+      >
+        {saunaImages.map((image, index) => (
+          <SwiperSlide key={index} className={styles.slide}>
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className={styles.zoomEffect}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
 
       <div className={styles.titleContainer}>
         <p className={styles.titleAccess}>ACCESS</p>
