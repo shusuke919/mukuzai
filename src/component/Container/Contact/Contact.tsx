@@ -20,7 +20,7 @@ const Contact = () => {
         <div className={styles.tellArea}>
           <p className={styles.titleText}>お電話でのお問い合わせ</p>
           <button className={styles.button}>
-            <a href="tel:090-998-2777"> TEL. 090-998-2777</a>
+            <a href="tel:090-998-2777"> TEL. 090-9998-2777</a>
           </button>
           <p>24時間受付中</p>
         </div>
