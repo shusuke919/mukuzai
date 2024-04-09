@@ -12,7 +12,15 @@ interface Props {
   splitText: React.JSX.Element[];
 }
 
-const images = ["/top_1.png", "/top_2.png", "/top_3.png", "/top_4.png"];
+const images = [
+  "/top_1.png",
+  "sauna2.png",
+  "/top_2.png",
+  "sauna7.png",
+  "/top_3.png",
+  "/top_4.png",
+  "sauna4.png",
+];
 
 const TopImage = () => {
   return (
@@ -56,6 +64,7 @@ const TopImage = () => {
                 <p>Enjoy Precious Time with Loved Ones.</p>
               </span>
               <p>コンテナハウス事業</p>
+              <p>バレルサウナ事業</p>
             </div>
           </SwiperSlide>
         ))}
