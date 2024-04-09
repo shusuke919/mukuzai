@@ -23,10 +23,10 @@ const saunaImages = [
 
 const ShowRoom = () => {
   return (
-    <div>
+    <>
       <div className={styles.titleContainer}>
         <p className={styles.title}>SHOW ROOM</p>
-        <p className={styles.subTitle}>コンテナ見学</p>
+        <p className={styles.subTitle}>コンテナハウス・バレルサウナ見学</p>
       </div>
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -148,7 +148,6 @@ const ShowRoom = () => {
         ))}
       </Swiper>
 
-
       <div className={styles.titleContainer}>
         <p className={styles.titleAccess}>ACCESS</p>
         <p className={styles.subTitle}>アクセス</p>
@@ -163,7 +162,7 @@ const ShowRoom = () => {
       <div className={styles.mapText}>
         〒583-0037 大阪府藤井寺市津堂３丁目４８６−１
       </div>
-    </div>
+    </>
   );
 };
 
