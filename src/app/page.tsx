@@ -22,7 +22,7 @@ export default function Home() {
         <title>夢中とは夢の中</title>
         <meta
           name="description"
-          content="夢中になれるmukuJiroのプロジェクトがまもなく公開予定です。お楽しみに！"
+          content="夢中とは夢の中です。事業内容はコンテナハウス事業、バレルサウナ事業"
         />
       </Head>
       <main>
