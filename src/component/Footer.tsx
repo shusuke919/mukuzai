@@ -21,7 +21,7 @@ const Footer = () => {
     <div className={styles.footerContainer}>
       <div className={styles.contents}>
         <Link href={"/"}>
-          <p>夢中とは夢の中TOP</p>{" "}
+          <p>コンテナハウス事業 トップ</p>
         </Link>
         <div className={styles.line}></div>
         {containerUrl && (
@@ -29,20 +29,14 @@ const Footer = () => {
             <p>サウナ事業</p>{" "}
           </Link>
         )}
-        {saunaUrl && (
-          <Link href={"/container"}>
-            <p>コンテナ事業</p>{" "}
-          </Link>
-        )}
+
         {topUrl && (
           <Link href={"/sauna"}>
             <p>サウナ事業</p>{" "}
           </Link>
         )}
-        　<div className={styles.line}></div>
-        {containerUrl && <p onClick={scrollToTop}>コンテナ事業TOP</p>}
-        {saunaUrl && <p onClick={scrollToTop}>サウナ事業TOP</p>}
-        {topUrl && <p onClick={scrollToTop}>コンテナ事業</p>}
+
+        {saunaUrl && <p onClick={scrollToTop}>サウナ事業 トップ</p>}
       </div>
 
       <p className={styles.copyRight}>
