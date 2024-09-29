@@ -14,6 +14,7 @@ import ShowRoom from "@/component/ShowRoom/ShowRoom";
 import Reservation from "@/component/Container/Resevation/Reservation";
 import Contact from "@/component/Container/Contact/Contact";
 import { ThemeProvider } from "@mui/material";
+import BusinessContents from "@/component/Container/BusinessContents/BusinessContents";
 
 export default function Home() {
   return (
@@ -35,6 +36,7 @@ export default function Home() {
             <SaunaMessages />
             <ShowRoom />
             <Reservation />
+            <BusinessContents />
             <Contact />
           </main>
           <main className={styles.pc}>
@@ -45,6 +47,7 @@ export default function Home() {
             <SaunaMessages />
             <ShowRoom />
             <Reservation />
+            <BusinessContents />
             <Contact />
           </main>
         </ThemeProvider>
