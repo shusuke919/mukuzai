@@ -1,0 +1,70 @@
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+.contactContainer {
+  margin: 100px 0;
+}
+
+.titleArea {
+  text-align: center;
+  margin-bottom: 50px;
+
+  .title {
+    color: #917e3a;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    @include sp {
+      letter-spacing: normal;
+      font-size: 2rem;
+    }
+  }
+
+  .subTitle {
+    font-size: 1rem;
+    margin-top: 20px;
+  }
+}
+
+.tableContainer {
+  overflow-x: auto; // スマートフォンで横スクロール可能にするため
+  margin: 0 auto;
+  max-width: 1000px;
+
+  @include sp {
+    margin: 0 20px;
+  }
+}
+
+.businessTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+
+    @include sp {
+      padding: 10px;
+    }
+  }
+
+  th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+}
