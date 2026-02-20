@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(npm ci)",
+      "Bash(git *)",
+      "Bash(ls *)",
+      "Bash(cd *)",
+      "Bash(mkdir *)",
+      "Bash(rm *)",
+      "Bash(mv *)",
+      "Bash(cp *)",
+      "Bash(cat *)",
+      "Bash(which *)",
+      "Bash(file *)",
+      "Bash(du *)",
+      "Bash(magick *)",
+      "Bash(convert *)",
+      "Read",
+      "Edit",
+      "Write"
+    ]
+  }
+}
