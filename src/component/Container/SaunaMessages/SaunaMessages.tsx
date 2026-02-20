@@ -18,7 +18,7 @@ const SaunaMessages = () => {
         </div>
       </div>
       <div className={styles.scrollableImageContainer}>
-        <img src={"/sauna2.png"} alt={"Right"} className={styles.zoomEffect} />
+        <img src={"/sauna2.webp"} alt={"Right"} className={styles.zoomEffect} />
       </div>
     </div>
   );

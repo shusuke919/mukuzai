@@ -13,13 +13,13 @@ interface Props {
 }
 
 const images = [
-  "/top_1.png",
-  "sauna2.png",
-  "/top_2.png",
-  "sauna7.png",
-  "/top_3.png",
-  "/top_4.png",
-  "sauna4.png",
+  "/top_1.webp",
+  "/sauna2.webp",
+  "/top_2.webp",
+  "/sauna7.webp",
+  "/top_3.webp",
+  "/top_4.webp",
+  "/sauna4.webp",
 ];
 
 const TopImage = () => {

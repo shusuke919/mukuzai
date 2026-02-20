@@ -7,14 +7,14 @@ const Messages = () => {
     <div className={styles.container}>
       <div className={styles.fixedContent}>
         <img
-          src={"/message_left.png"}
+          src={"/message_left.webp"}
           alt={"Right"}
           className={styles.zoomEffect}
         />
       </div>
       <div className={styles.scrollableImageContainer}>
         <img
-          src={"/message_right.png"}
+          src={"/message_right.webp"}
           alt={"Right"}
           className={styles.zoomEffect}
         />

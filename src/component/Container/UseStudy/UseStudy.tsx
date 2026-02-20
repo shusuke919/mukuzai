@@ -17,7 +17,7 @@ const UseStudy = () => {
           </p>
         </div>
         <div className={styles.case}>
-          <img src={"/cafe.png"} alt={"case"} />
+          <img src={"/cafe.webp"} alt={"case"} />
           <p className={styles.caseTitle}>店舗として</p>
           <p className={styles.caseContent}>
             目に留まりやすいコンテナハウスは、店舗としての利用に最適
@@ -33,14 +33,14 @@ const UseStudy = () => {
           </p>
         </div>
         <div className={styles.case}>
-          <img src={"/office.png"} alt={"case"} />
+          <img src={"/office.webp"} alt={"case"} />
           <p className={styles.caseTitle}>オフィスとして</p>
           <p className={styles.caseContent}>
             シャープな外観のコンテナは、機能的なオフィスとしても〇
           </p>
         </div>
       </div>
-      <img src={"/container.png"} alt={"case"} className={styles.zoomEffect} />
+      <img src={"/container.webp"} alt={"case"} className={styles.zoomEffect} />
     </div>
   );
 };

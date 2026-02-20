@@ -6,7 +6,7 @@ const SaunaImage = () => {
   return (
     <div className={styles.fullWidthImageContainer}>
       <Image
-        src="/sauna_room.png"
+        src="/sauna_room.webp"
         alt="Sauna"
         width={500}
         objectFit="cover"
@@ -18,7 +18,7 @@ const SaunaImage = () => {
         }}
       />
       <Image
-        src="/sauna_room.png"
+        src="/sauna_room.webp"
         alt="Sauna"
         width={300}
         objectFit="cover"

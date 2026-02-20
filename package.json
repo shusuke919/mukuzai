@@ -2,6 +2,9 @@
   "name": "mukuzai",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,7 +22,7 @@
     "react-dom": "^18",
     "sass": "^1.70.0",
     "stripe": "^14.9.0",
-    "swiper": "^11.0.5"
+    "swiper": "^11.0.6"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",
