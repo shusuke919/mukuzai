@@ -8,14 +8,14 @@ const Messages = () => {
       <div className={styles.fixedContent}>
         <img
           src={"/message_left.webp"}
-          alt={"Right"}
+          alt={"コンテナハウス内装イメージ"}
           className={styles.zoomEffect}
         />
       </div>
       <div className={styles.scrollableImageContainer}>
         <img
           src={"/message_right.webp"}
-          alt={"Right"}
+          alt={"コンテナハウス外観イメージ"}
           className={styles.zoomEffect}
         />
         <div className={styles.verticalTextContainer}>

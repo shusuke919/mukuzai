@@ -36,6 +36,25 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.mukuzai-life.com"),
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: "夢中とは夢の中",
+  description: "大阪・関西でコンテナハウス・バレルサウナの設計・施工を行う会社",
+  url: "https://www.mukuzai-life.com",
+  telephone: "090-9998-2777",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "津堂３丁目４８６−１",
+    addressLocality: "藤井寺市",
+    addressRegion: "大阪府",
+    postalCode: "583-0037",
+    addressCountry: "JP",
+  },
+  areaServed: ["大阪府", "関西"],
+  serviceType: ["コンテナハウス設計", "コンテナハウス施工", "バレルサウナ販売"],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -43,6 +62,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ja">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className={inter.className}>
         <Header />
         {children}
