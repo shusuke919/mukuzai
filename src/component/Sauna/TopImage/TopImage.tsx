@@ -10,7 +10,7 @@ const TopImage = ({ splitText }: Props) => {
   return (
     <div className={styles.imageContainer}>
       <Image
-        src="/sauna_top.png"
+        src="/sauna_top.webp"
         alt="Sauna"
         width={1600}
         height={900}
@@ -19,7 +19,7 @@ const TopImage = ({ splitText }: Props) => {
         className={styles.pc}
       />
       <Image
-        src="/sauna_top.png"
+        src="/sauna_top.webp"
         alt="Sauna"
         width={800}
         height={400}

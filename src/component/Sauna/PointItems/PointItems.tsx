@@ -39,7 +39,7 @@ const PointItems = () => {
           <CardMedia
             component="img"
             sx={{ width: 180 }}
-            image="/point_top.png"
+            image="/point_top.webp"
             alt="Live from space album cover"
           />
         </Card>
@@ -49,7 +49,7 @@ const PointItems = () => {
           <CardMedia
             component="img"
             sx={{ width: 180 }}
-            image="/point_center.png"
+            image="/point_center.webp"
             alt="Live from space album cover"
           />
           <Box
@@ -107,7 +107,7 @@ const PointItems = () => {
           <CardMedia
             component="img"
             sx={{ width: 180 }}
-            image="/point_last.png"
+            image="/point_last.webp"
             alt="Live from space album cover"
           />
         </Card>

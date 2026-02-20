@@ -21,38 +21,38 @@ import { useTheme } from "@mui/material/styles";
 const images = [
   {
     label: "Bird",
-    imgPath: "/IMG_6985.png",
+    imgPath: "/IMG_6985.webp",
   },
   {
     label: "Bali, Indonesia",
-    imgPath: "/IMG_6995.png",
+    imgPath: "/IMG_6995.webp",
   },
   {
     label: "Goč, Serbia",
-    imgPath: "/IMG_6993.png",
+    imgPath: "/IMG_6993.webp",
   },
   {
     label: "Bird",
-    imgPath: "/IMG_4960.png",
+    imgPath: "/IMG_4960.webp",
   },
 ];
 
 const imagesSecond = [
   {
     label: "Bird",
-    imgPath: "/IMG_4465.png",
+    imgPath: "/IMG_4465.webp",
   },
   {
     label: "Bali, Indonesia",
-    imgPath: "/IMG_6280 1.png",
+    imgPath: "/IMG_6280 1.webp",
   },
   {
     label: "Goč, Serbia",
-    imgPath: "/IMG_5985.png",
+    imgPath: "/IMG_5985.webp",
   },
   {
     label: "San Francisco – Oakland Bay Bridge, United States",
-    imgPath: "/IMG_3585.png",
+    imgPath: "/IMG_3585.webp",
   },
 ];
 
