@@ -1,8 +1,6 @@
 "use client";
 
-import Head from "next/head";
 import styles from "./page.module.scss";
-
 import React from "react";
 import theme from "@/theme";
 import TopImage from "@/component/Container/TopImage/TopImage";
@@ -18,40 +16,31 @@ import BusinessContents from "@/component/Container/BusinessContents/BusinessCon
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>夢中とは夢の中</title>
-        <meta
-          name="description"
-          content="夢中とは夢の中です。事業内容はコンテナハウス事業、バレルサウナ事業"
-        />
-      </Head>
+    <ThemeProvider theme={theme}>
       <main>
-        <ThemeProvider theme={theme}>
-          <main className={styles.sp}>
-            <TopImage />
-            <Messages />
-            <Concept />
-            <UseStudy />
-            <SaunaMessages />
-            <ShowRoom />
-            <Reservation />
-            <BusinessContents />
-            <Contact />
-          </main>
-          <main className={styles.pc}>
-            <TopImage />
-            <Messages />
-            <Concept />
-            <UseStudy />
-            <SaunaMessages />
-            <ShowRoom />
-            <Reservation />
-            <BusinessContents />
-            <Contact />
-          </main>
-        </ThemeProvider>
+        <div className={styles.sp}>
+          <TopImage />
+          <Messages />
+          <Concept />
+          <UseStudy />
+          <SaunaMessages />
+          <ShowRoom />
+          <Reservation />
+          <BusinessContents />
+          <Contact />
+        </div>
+        <div className={styles.pc}>
+          <TopImage />
+          <Messages />
+          <Concept />
+          <UseStudy />
+          <SaunaMessages />
+          <ShowRoom />
+          <Reservation />
+          <BusinessContents />
+          <Contact />
+        </div>
       </main>
-    </>
+    </ThemeProvider>
   );
 }

@@ -23,15 +23,15 @@ export default function Sauna() {
   ));
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <main className={styles.sp}>
+    <ThemeProvider theme={theme}>
+      <main>
+        <div className={styles.sp}>
           <SpSauna splitText={splitText} />
-        </main>
-        <main className={styles.pc}>
+        </div>
+        <div className={styles.pc}>
           <PcSauna splitText={splitText} />
-        </main>
-      </ThemeProvider>
-    </>
+        </div>
+      </main>
+    </ThemeProvider>
   );
 }

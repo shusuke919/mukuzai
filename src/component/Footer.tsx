@@ -6,7 +6,6 @@ import Link from "next/link";
 
 const Footer = () => {
   const pathname = usePathname();
-  console.log(pathname);
   const containerUrl = pathname === "/container";
   const saunaUrl = pathname === "/sauna";
   const topUrl = pathname === "/";
