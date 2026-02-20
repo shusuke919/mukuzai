@@ -6,7 +6,7 @@ const Concept = () => {
     <div className={styles.fixedContent}>
       <img
         src={"/conscept.png"}
-        alt={"Concept"}
+        alt={"コンテナハウスのコンセプトイメージ"}
         className={styles.zoomEffect}
       />
       <div className={styles.textOverlay}>
