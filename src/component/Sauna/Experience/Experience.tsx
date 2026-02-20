@@ -30,7 +30,7 @@ const Experience = () => {
 
           mt: 10,
         }}
-        image="/体験img.png"
+        image="/体験img.webp"
         alt="green iguana"
       />
     </div>

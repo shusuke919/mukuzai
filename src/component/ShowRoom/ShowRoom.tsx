@@ -4,21 +4,21 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 
 const containerImages = [
-  "/container1.png",
-  "/container2.png",
-  "/container3.png",
-  "/container4.png",
-  "/container5.png",
-  "/container6.png",
+  "/container1.webp",
+  "/container2.webp",
+  "/container3.webp",
+  "/container4.webp",
+  "/container5.webp",
+  "/container6.webp",
 ];
 const saunaImages = [
-  "/sauna1.png",
-  "/sauna2.png",
-  "/sauna3.png",
-  "/sauna4.png",
-  "/sauna5.png",
-  "/sauna6.png",
-  "/sauna7.png",
+  "/sauna1.webp",
+  "/sauna2.webp",
+  "/sauna3.webp",
+  "/sauna4.webp",
+  "/sauna5.webp",
+  "/sauna6.webp",
+  "/sauna7.webp",
 ];
 
 const ShowRoom = () => {
